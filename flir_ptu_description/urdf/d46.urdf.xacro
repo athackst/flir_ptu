@@ -14,8 +14,9 @@
     <link name="${ptu_name}_${joint_name}_link">
       <inertial>
         <mass value="0.65" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <inertia  ixx="0.00054" ixy="0.0"  ixz="0.0"  iyy="0.00033"  iyz="0.0"	izz="0.00067" />
-      </inertial> 
+      </inertial>
       <visual>
         <material name="ptu_body_color">
           <color rgba="0.3 0.3 0.3 1.0" />
@@ -64,7 +65,7 @@
   <xacro:macro name="ptu_d46" params="name">
     <d46_stepper_module ptu_name="${name}" joint_name="pan" />
     <d46_stepper_module ptu_name="${name}" joint_name="tilt" />
-    <link name="${name}_base_link" />    
+    <link name="${name}_base_link" />
     <link name="${name}_tilted_link" />
     <link name="${name}_mount_link" >
       <inertial>
