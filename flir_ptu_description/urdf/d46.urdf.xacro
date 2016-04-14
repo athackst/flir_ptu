@@ -67,50 +67,7 @@
     <d46_stepper_module ptu_name="${name}" joint_name="tilt" />
     <link name="${name}_base_link" />
     <link name="${name}_tilted_link" />
-    <link name="${name}_mount_link" >
-      <inertial>
-        <mass value="0.10" />
-        <inertia  ixx="0.00003" ixy="0.0"  ixz="0.0"  iyy="0.00001"  iyz="0.0"	izz="0.00004" />
-      </inertial> 
-      <visual>
-        <geometry>
-          <box size="0.025 0.064 0.005" />
-        </geometry>
-        <origin xyz="0.0 0.0 -0.0025" />
-      </visual>
-      <visual>
-        <geometry>
-          <box size="0.025 0.009 0.045" />
-        </geometry>
-       <origin xyz="0.0 0.0275 -0.0275" />
-      </visual>
-      <visual>
-        <geometry>
-          <box size="0.025 0.009 0.045" />
-        </geometry>
-         <origin xyz="0.0 -0.0275 -0.0275" />
-      </visual>  
-      
-      <collision>
-        <geometry>
-          <box size="0.025 0.064 0.005" />
-        </geometry>
-        <origin xyz="0.0 0.0 -0.0025" />
-      </collision>
-      <collision>
-        <geometry>
-          <box size="0.025 0.009 0.045" />
-        </geometry>
-        <origin xyz="0.0 0.0275 -0.0275" />
-      </collision>
-      <collision>
-        <geometry>
-          <box size="0.025 0.009 0.045" />
-        </geometry>
-        <origin xyz="0.0 -0.0275 -0.0275" />
-      </collision>     
-          
-    </link>
+    <link name="${name}_mount_link" />
 
     <!-- There's an offset between the origin of the pan joint and the origin of 
          the overall device, which is between the mounting screws on its base. -->
